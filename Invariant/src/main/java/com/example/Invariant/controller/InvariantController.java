@@ -8,22 +8,36 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
+
 @RestController
 public class InvariantController {
 
-    public final SimpleInvariantEvaluator evaluator = new SimpleInvariantEvaluator();
+    private final SimpleInvariantEvaluator evaluator = new SimpleInvariantEvaluator();
 
     @PostMapping("/invariant/evaluate")
-    public InvariantResult evaluate(@RequestBody Map<String , Object> data){
+    public List<InvariantResult> evaluate(@RequestBody Map<String, Object> data) {
 
+        // 1. Build context
         InvariantContext context = new InvariantContext();
         context.setData(data);
 
-        Invariant invariant = new Invariant();
-        invariant.setId("amount-positive");
-        invariant.setDescription("amount should be greater than zero");
+        // 2. Define invariants
+        List<Invariant> invariants = new ArrayList<>();
 
-        return evaluator.evaluate(invariant,context);
+        Invariant inv1 = new Invariant();
+        inv1.setId("amount-positive");
+        inv1.setDescription("amount should be greater than zero");
+        invariants.add(inv1);
+
+        Invariant inv2 = new Invariant();
+        inv2.setId("amount-less-than-100");
+        inv2.setDescription("amount should be less than 100");
+        invariants.add(inv2);
+
+        // 3. Delegate to engine
+        return evaluator.evaluateAll(invariants, context);
     }
 }

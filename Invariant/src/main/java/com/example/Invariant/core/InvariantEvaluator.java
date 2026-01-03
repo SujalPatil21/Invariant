@@ -1,7 +1,11 @@
 package com.example.Invariant.core;
 
+import java.util.List;
 
 public interface InvariantEvaluator {
-    InvariantResult evaluate(Invariant invariant, InvariantContext context);
-}
 
+    List<InvariantResult> evaluateAll(
+            List<Invariant> invariants,
+            InvariantContext context
+    );
+}

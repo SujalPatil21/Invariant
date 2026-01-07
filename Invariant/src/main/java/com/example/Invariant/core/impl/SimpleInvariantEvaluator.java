@@ -4,10 +4,12 @@ import com.example.Invariant.core.Invariant;
 import com.example.Invariant.core.InvariantContext;
 import com.example.Invariant.core.InvariantEvaluator;
 import com.example.Invariant.core.InvariantResult;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class SimpleInvariantEvaluator implements InvariantEvaluator {
 
     @Override
@@ -26,7 +28,7 @@ public class SimpleInvariantEvaluator implements InvariantEvaluator {
 
             Object value = context.getData().get("amount");
 
-            // Case 1: missing key
+
             if (value == null) {
                 result.setSatisfied(false);
                 result.setFailureReason("required key 'amount' missing");
@@ -34,7 +36,7 @@ public class SimpleInvariantEvaluator implements InvariantEvaluator {
                 continue;
             }
 
-            // Case 2: wrong type
+
             if (!(value instanceof Integer)) {
                 result.setSatisfied(false);
                 result.setFailureReason("invalid type for key 'amount'");

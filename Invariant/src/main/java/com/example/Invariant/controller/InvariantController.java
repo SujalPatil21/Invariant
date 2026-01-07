@@ -15,7 +15,12 @@ import java.util.Map;
 @RestController
 public class InvariantController {
 
-    private final SimpleInvariantEvaluator evaluator = new SimpleInvariantEvaluator();
+    private final SimpleInvariantEvaluator evaluator;
+
+    public InvariantController(SimpleInvariantEvaluator evaluator) {
+
+        this.evaluator = evaluator;
+    }
 
     @PostMapping("/invariant/evaluate")
     public List<InvariantResult> evaluate(@RequestBody Map<String, Object> data) {

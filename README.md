@@ -1,4 +1,4 @@
-# Invariant (In Production)
+# Invariant (Currently In Devlopment Phase)
 
 **A Runtime Platform for Protocol Enforcement, Silent Failure Detection, and System Truth Reconstruction**
 

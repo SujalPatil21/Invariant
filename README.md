@@ -153,14 +153,14 @@ Detect when the system lies but does not crash.
 
 ### Execution Protocol
 
-## 🔇 Silent Failure Scenario
+##  Silent Failure Scenario
 
 **Observed Execution:**
 
 - Sender account is debited  
 - Receiver credit operation fails  
 - Notification is still sent  
-- Application shows: **Transfer Successful ✅**
+- Application shows: **Transfer Successful **
 
 **Actual Result:**
 

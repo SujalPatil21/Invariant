@@ -6,7 +6,7 @@ Invariant transforms backend systems from *best-effort execution* into **provabl
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Modern backend systems are governed by **implicit execution protocols**.
 
@@ -34,7 +34,7 @@ Invariant is a runtime correctness platform that makes system behavior:
 
 ---
 
-## ❌ The Core Problem
+##  The Core Problem
 
 Backend systems suffer from three structural failures.
 
@@ -60,7 +60,7 @@ Reality does not.
 
 ---
 
-## 🔕 Silent Failures
+##  Silent Failures
 
 Failures where:
 
@@ -82,7 +82,7 @@ The system lies — silently.
 
 ---
 
-## ❌ No Ground Truth
+##  No Ground Truth
 
 When something goes wrong:
 
@@ -101,7 +101,7 @@ There is no system truth.
 
 ---
 
-## 🧠 Core Philosophy
+##  Core Philosophy
 
 Invariant is built on three principles:
 
@@ -113,7 +113,7 @@ Invariant is built on three principles:
 
 ---
 
-## 🧩 The Three Pillars
+##  The Three Pillars
 
 ### 1️⃣ Runtime Protocol Enforcement
 
@@ -172,7 +172,7 @@ This is a **silent failure** — the system lies without crashing.
 
 ---
 
-## ✅ With Invariant Enforcement
+##  With Invariant Enforcement
 
 ### Runtime Protocol Rule
 
@@ -202,7 +202,7 @@ Invariant introduces a **System Truth Timeline** — a deterministic, chronologi
 
 ---
 
-### 📌 Example: Hospital Appointment System
+###  Example: Hospital Appointment System
 
 #### Expected Execution Sequence
 
@@ -213,7 +213,7 @@ Invariant introduces a **System Truth Timeline** — a deterministic, chronologi
 
 ---
 
-### ❌ What Usually Happens
+###  What Usually Happens
 
 - Logs are scattered across services  
 - Events are missing or out of order  
@@ -224,7 +224,7 @@ Later, when the patient complains, no one knows what actually happened.
 
 ---
 
-### ✅ With Invariant Truth Timeline
+###  With Invariant Truth Timeline
 
 ### Invariant records every protocol step and side-effect in a single immutable timeline.
 
@@ -238,7 +238,7 @@ This timeline is the **ground truth** of the system.
 
 ---
 
-### 🔍 What This Enables
+###  What This Enables
 
 - Deterministic incident debugging  
 - Accurate failure root-cause analysis  
@@ -248,21 +248,21 @@ This timeline is the **ground truth** of the system.
 
 ---
 
-### 🧠 Core Idea
+###  Core Idea
 
 > If your system cannot tell you what actually happened.  
 > your system is not observable .
 
 Invariant turns distributed execution into a **verifiable, replayable, and auditable system history.**
 
-## 🔗 Combined Example — Online Course Enrollment
+##  Combined Example — Online Course Enrollment
 
 ### Protocol  
 Enroll Student → Process Payment → Grant Course Access → Send Welcome Email
 
 ---
 
-### ❌ What Can Go Wrong
+###  What Can Go Wrong
 
 Sometimes systems say **“success”** even when something breaks:
 
@@ -276,7 +276,7 @@ Dashboard still shows green.
 
 ---
 
-### ✅ How Invariant Helps
+###  How Invariant Helps
 
 Invariant enforces correctness at runtime:
 
@@ -299,7 +299,7 @@ If access fails:
 14:23 PROTOCOL_VIOLATION
 14:23 RefundInitiated
 
-### ✨ Result
+###  Result
 
 - No broken states  
 - No silent failures  

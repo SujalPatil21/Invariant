@@ -1,4 +1,4 @@
-# Invariant (Currently In Devlopment Phase)
+# Invariant
 
 **A Runtime Platform for Protocol Enforcement, Silent Failure Detection, and System Truth Reconstruction**
 
@@ -305,6 +305,22 @@ If access fails:
 - No silent failures  
 - No guessing in production  
 - Only verified correctness
+
+## Project Status: Discontinued
+
+This project is no longer actively maintained.
+
+Reason:
+The current implementation does not align with the intended long-term direction and would require a significant redesign rather than incremental improvements.
+
+What this means:
+- No further updates or features will be added
+- Issues and pull requests may not be reviewed
+
+Next Steps:
+Active development has shifted to newer projects with a stronger focus on scalable backend systems and real-world applicability.
+
+Please refer to the pinned repositories for ongoing work.
   
 ## Author
 - **Sujal Patil**  
